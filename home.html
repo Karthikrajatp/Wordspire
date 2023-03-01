@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Scriber's Den</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: #ffffff;
+        overflow: hidden;
+      }
+      .header {
+        height: 10vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 10px;
+        border-bottom: 2px solid #000000;
+      }
+
+      .header div {
+        color: #000000;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .header a {
+        text-decoration: none;
+        color: rgb(11, 11, 11);
+      }
+      .header a:hover{
+        font-size: x-large;
+      }
+      .main {
+        display: flex;
+        height: 100vh;
+      }
+      .navbar {
+        background-color: rgb(228, 213, 152);
+        width: 15%;
+        border-right: 2px black solid;
+        border-bottom: 2px black solid;
+      }
+      .nav {
+        padding: 0;
+        list-style-type: none;
+        height: 100%;
+        margin: 0;
+        width: 80%;
+        text-align: center;
+      }
+      .nav li {
+        width: 100%;
+        padding: 20px;
+      }
+      .nav li a {
+        display: block;
+        color: #000000;
+        background-color:rgb(228, 213, 152);
+        text-decoration: none;
+        text-align: center;
+        font-family: "Courier New", Courier, monospace;
+        font-size: large;
+      }
+      .nav li a:hover {
+        color: rgb(255, 0, 0);
+        font-size: xx-large
+      }
+
+      .content {
+        background-color: white;
+        opacity: 0.8;
+        height: 100%;
+        width: 85%;
+        overflow-y: scroll;
+        border-bottom:2px solid black ;
+      }
+      /* .footer {
+        color: rgb(255, 255, 255);
+        background-color: rgb(211, 203, 203);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.9;
+        height: 10vh;
+        border-top: 2px solid black;
+        margin-top:2px;
+      }
+      .footer a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+      } */
+      
+      
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div><h1>The Scriber's Den Welcomes You</h1></div>
+      <div><a href="#">Profile</a></div>
+    </div>
+    <div class="main">
+      <div class="navbar">
+        <ul class="nav">
+          <li>
+            <a href="#"><bold>Home</bold></a>
+          </li>
+          <li><a href="#">Create</a></li>
+          <li><a href="#">Search</a></li>
+          <li><a href="#">Favourites</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+      <div class="content">
+     <!-- text -->
+    </div>
+    </div>
+    <!-- <div class="footer">
+      <h1>
+        Under Development by <span><a href="https://github.com/Karthikrajatp">Karthikrajatp</a></span>
+      </h1>
+    </div> -->
+  </body>
+</html>
