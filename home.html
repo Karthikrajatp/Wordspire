@@ -4,21 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Scriber's Den</title>
+    <title>The WORDSPIRE</title>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
       * {
         padding: 0;
         margin: 0;
       }
-      html{
-        height:100%;
-        width:100%;
+      html {
+        height: 100%;
+        width: 100%;
       }
       body {
         height: inherit;
-        width:inherit;
+        width: inherit;
         background-color: #ffffff;
-        overflow-y:scroll ;
+        overflow-y: scroll;
       }
       .header {
         height: 10vh;
@@ -35,10 +36,13 @@
         font-family: "Courier New", Courier, monospace;
       }
       .header a {
+        font-size:large;
         text-decoration: none;
         color: rgb(11, 11, 11);
+        font-family: Poppins;
+        transition: 0.4s;
       }
-      .header a:hover{
+      .header a:hover {
         font-size: x-large;
       }
       .main {
@@ -67,10 +71,10 @@
       .nav li a {
         display: block;
         color: #000000;
-        background-color:rgb(228, 213, 152);
+        background-color: rgb(228, 213, 152);
         text-decoration: none;
         text-align: center;
-        font-family: "Courier New", Courier, monospace;
+        font-family: Poppins;
         font-size: large;
       }
       .nav li a:hover {
@@ -103,43 +107,43 @@
         align-items: start;
 
       } */
-      .grid-item{
+      .grid-item {
         background-color: #fff;
-        border-radius: 0.4rem ;
-        overflow:hidden;
-        box-shadow: 0 3rem 6rem rgba(0,0,0,0.1);
-        cursor:pointer;
+        border-radius: 0.4rem;
+        overflow: hidden;
+        box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+        cursor: pointer;
         transition: 0.2s;
       }
-      .grid-item:hover{
+      .grid-item:hover {
         transform: translateY(-0.5%);
-        box-shadow: 0 4rem 8rem rgba(0,0,0,0.5);
+        box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
       }
-      .card-img{
+      .card-img {
         display: block;
-        width:100%;
-        height:10rem;
+        width: 100%;
+        height: 10rem;
         object-fit: cover;
       }
-      .card-content{
+      .card-content {
         padding: 1rem;
       }
-      .card-header{
+      .card-header {
         font-size: 2rem;
-        font-weight:500;
-        color:#0d0d0d;
+        font-weight: 500;
+        color: #0d0d0d;
         margin-bottom: 1.5rem;
       }
-      .card-text{
+      .card-text {
         font-size: 0.9rem;
         letter-spacing: 0.1rem;
         line-height: 1rem;
-        color:#3d3d3d;
+        color: #3d3d3d;
         margin-bottom: 2.5rem;
       }
-      .card-btn{
+      .card-btn {
         display: block;
-        width:100%;
+        width: 100%;
         padding: 1rem;
         font-size: 1rem;
         text-align: center;
@@ -148,19 +152,19 @@
         border: none;
         border-radius: 0.4rem;
         transition: 0.2s;
-        cursor:pointer;
+        cursor: pointer;
         letter-spacing: 0.1rem;
       }
-      .card-btn span{
+      .card-btn span {
         margin-left: 1rem;
-        transition: .2s; 
+        transition: 0.2s;
       }
       .card-btn:hover,
-      .card-btn:active{
-        background-color: #c2cffc; 
+      .card-btn:active {
+        background-color: #c2cffc;
       }
       .card-btn:hover span,
-      .card-btn:active span{
+      .card-btn:active span {
         margin-left: 1.5rem;
       }
       /* .footer {
@@ -178,7 +182,6 @@
         color: rgb(255, 255, 255);
         text-decoration: none;
       } */
-      
     </style>
   </head>
   <body>
@@ -189,99 +192,101 @@
     <div class="main">
       <div class="navbar">
         <ul class="nav">
-          <li><a href="#"><bold>Home</bold></a></li>
+          <li>
+            <a href="#"><bold>Home</bold></a>
+          </li>
           <li><a href="#">Create</a></li>
           <li><a href="#">Search</a></li>
           <li><a href="#">Favourites</a></li>
           <li><a href="#">About</a></li>
         </ul>
       </div>
-    <div class="content">
-      <div class="grid-item">
-        <div class="card">
-          <img class="card-img" src="doodle.jpeg" alt="doodle">
-          <div class="card-content">
-            <h1 class="card-header">Doodle</h1>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Iusto quidem aliquid magnam cupiditate repellendus? Molestiae odio iste
-            </p>
-            <button class="card-btn">
-              Visit <span>&rarr;</span>
-            </button>
+      <div class="content">
+        <div class="grid-item">
+          <div class="card">
+            <img class="card-img" src="doodle.jpeg" alt="doodle" />
+            <div class="card-content">
+              <h1 class="card-header">Doodle</h1>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                quidem aliquid magnam cupiditate repellendus? Molestiae odio
+                iste
+              </p>
+              <button class="card-btn">Visit <span>&rarr;</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="card">
+            <img class="card-img" src="doodle.jpeg" alt="doodle" />
+            <div class="card-content">
+              <h1 class="card-header">Doodle</h1>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                quidem aliquid magnam cupiditate repellendus? Molestiae odio
+                iste
+              </p>
+              <button class="card-btn">Visit <span>&rarr;</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="card">
+            <img class="card-img" src="doodle.jpeg" alt="doodle" />
+            <div class="card-content">
+              <h1 class="card-header">Doodle</h1>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                quidem aliquid magnam cupiditate repellendus? Molestiae odio
+                iste
+              </p>
+              <button class="card-btn">Visit <span>&rarr;</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="card">
+            <img class="card-img" src="doodle.jpeg" alt="doodle" />
+            <div class="card-content">
+              <h1 class="card-header">Doodle</h1>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                quidem aliquid magnam cupiditate repellendus? Molestiae odio
+                iste
+              </p>
+              <button class="card-btn">Visit <span>&rarr;</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="card">
+            <img class="card-img" src="doodle.jpeg" alt="doodle" />
+            <div class="card-content">
+              <h1 class="card-header">Doodle</h1>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                quidem aliquid magnam cupiditate repellendus? Molestiae odio
+                iste
+              </p>
+              <button class="card-btn">Visit <span>&rarr;</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="card">
+            <img class="card-img" src="doodle.jpeg" alt="doodle" />
+            <div class="card-content">
+              <h1 class="card-header">Doodle</h1>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                quidem aliquid magnam cupiditate repellendus? Molestiae odio
+                iste
+              </p>
+              <button class="card-btn">Visit <span>&rarr;</span></button>
+            </div>
           </div>
         </div>
       </div>
-      <div class="grid-item">
-        <div class="card">
-          <img class="card-img" src="doodle.jpeg" alt="doodle">
-          <div class="card-content">
-            <h1 class="card-header">Doodle</h1>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Iusto quidem aliquid magnam cupiditate repellendus? Molestiae odio iste
-            </p>
-            <button class="card-btn">
-              Visit <span>&rarr;</span>
-            </button>
-          </div>
-        </div>
-      </div> 
-      <div class="grid-item">
-        <div class="card">
-          <img class="card-img" src="doodle.jpeg" alt="doodle">
-          <div class="card-content">
-            <h1 class="card-header">Doodle</h1>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Iusto quidem aliquid magnam cupiditate repellendus? Molestiae odio iste
-            </p>
-            <button class="card-btn">
-              Visit <span>&rarr;</span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div class="card">
-          <img class="card-img" src="doodle.jpeg" alt="doodle">
-          <div class="card-content">
-            <h1 class="card-header">Doodle</h1>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Iusto quidem aliquid magnam cupiditate repellendus? Molestiae odio iste
-            </p>
-            <button class="card-btn">
-              Visit <span>&rarr;</span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div class="card">
-          <img class="card-img" src="doodle.jpeg" alt="doodle">
-          <div class="card-content">
-            <h1 class="card-header">Doodle</h1>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Iusto quidem aliquid magnam cupiditate repellendus? Molestiae odio iste
-            </p>
-            <button class="card-btn">
-              Visit <span>&rarr;</span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div class="card">
-          <img class="card-img" src="doodle.jpeg" alt="doodle">
-          <div class="card-content">
-            <h1 class="card-header">Doodle</h1>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Iusto quidem aliquid magnam cupiditate repellendus? Molestiae odio iste
-            </p>
-            <button class="card-btn">
-              Visit <span>&rarr;</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
     </div>
     <!-- <div class="footer">
       <h1>
