@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wordspire</title>
+    <style>
+         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+        .html{
+            height: 100%;
+            width: 100%;
+        }
+        .body{
+            height: inherit;
+            width: inherit;
+        }
+        .header{
+            height:10vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 10px;
+            border-bottom: 2px solid #000000;
+        }
+        .header a{
+            font-family: Poppins;
+            font-size:large;
+            text-decoration: none;
+            color: rgb(11, 11, 11);
+            transition: 0.4s;
+        }
+        .header a:hover{
+            font-size: x-large;
+        }
+        .search{
+            margin-top: 1%;
+            text-align: center;
+        }
+        .categories{
+            width: 200px;
+            height: 30px;
+            font-family: Poppins;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        .searchbox{
+            width: 200px;
+            height: 24px;
+            margin-left: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        .search-btn{
+            height: 30px;
+            margin-left: 20px;
+            background: #2691d9;
+            border-radius: 10px;
+            font-family: Poppins;
+            color: #ffffff;
+            border-color: #700d0d;
+            transition: 0.5s;
+        }
+        
+        .search-btn:hover{
+            background-color: #026aaf;
+            transform: scale(1.2);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div><h1>The Wordspire</h1></div>
+        <div class="rc">
+            <a href="#">Home</a>
+            <a href="#">LogOut</a>
+        </div>
+    </div>
+
+    <div class="search">
+        <form action="#">
+            <select class="categories" name="categories">
+                <option value="" disabled selected>Select your Category</option>
+                <option>Nature</option>
+                <option>Technology</option>
+                <option>Fashion</option>
+                <option>Food</option>
+                <option>Education</option>
+            </select>
+            <input type="text" class="searchbox">
+            <input type="submit" class="search-btn" value="Search">
+        </form>
+    </div>
+    <div>
+        <p></p>
+    </div>
+    
+</body>
+</html>
