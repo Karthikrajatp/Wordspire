@@ -38,13 +38,10 @@
       .header a {
         font-size:large;
         text-decoration: none;
-        color: rgb(11, 11, 11);
+        color: rgb(255, 255, 255);
         font-family: Poppins;
-        transition: 0.4s;
       }
-      .header a:hover {
-        font-size: x-large;
-      }
+      
       .main {
         display: flex;
         height: 100vh;
@@ -82,30 +79,15 @@
       }
 
       .content {
-        /* background-color: #eee;
-        padding: 0.8%;
         font-family: monospace;
-        display:flex;
-        opacity: 0.8;
-        height: 100vh;
-        width: 85%;
-        overflow-y: scroll;
-        border-bottom:2px solid black ; */
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-auto-rows: 450px;
         grid-gap: 10px;
         background-color: #eee;
         padding: 10px;
         overflow: scroll;
       }
-      /* .grid{
-        display: grid;
-        width:114em;
-        grid-gap: 6rem;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        align-items: start;
-      } */
       .grid-item {
         background-color: #fff;
         border-radius: 0.4rem;
@@ -146,8 +128,8 @@
         padding: 1rem;
         font-size: 1rem;
         text-align: center;
-        color: #3363ff;
-        background-color: #d8e0fd;
+        color: rgb(255, 255, 255);
+        background-color: dodgerblue;
         border: none;
         border-radius: 0.4rem;
         transition: 0.2s;
@@ -160,33 +142,25 @@
       }
       .card-btn:hover,
       .card-btn:active {
-        background-color: #c2cffc;
+        background-color: dodgerblue;
       }
       .card-btn:hover span,
       .card-btn:active span {
         margin-left: 1.5rem;
       }
-      /* .footer {
-        color: rgb(255, 255, 255);
-        background-color: rgb(211, 203, 203);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0.9;
-        height: 10vh;
-        border-top: 2px solid black;
-        margin-top:2px;
+      .profile-btn{
+        padding: 10px;
+        border-radius: 50px;
+        background: dodgerblue;
+        box-shadow:  3px 3px 7px #d9d9d9,
+                      -3px -3px 7px #ffffff;
       }
-      .footer a {
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-      } */
     </style>
   </head>
   <body>
     <div class="header">
       <div><h1>The Wordspire</h1></div>
-      <div><a href="#">Profile</a></div>
+      <div class="profile-btn"><a href="#">Profile</a></div>
     </div>
     <div class="main">
       <div class="navbar">
@@ -194,10 +168,10 @@
           <li>
             <a href="#"><bold>Home</bold></a>
           </li>
-          <li><a href="#">Create</a></li>
-          <li><a href="#">Search</a></li>
-          <li><a href="#">Favourites</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="create.html">Create</a></li>
+          <li><a href="search.html">Search</a></li>
+          <li><a href="favourites.html">Favourites</a></li>
+          <li><a href="about.html">About</a></li>
         </ul>
       </div>
       <div class="content">
@@ -229,6 +203,77 @@
             </div>
           </div>
         </div>
+        
+        <div class="grid-item">
+          <div class="card">
+            <img class="card-img" src="doodle.jpeg" alt="doodle" />
+            <div class="card-content">
+              <h1 class="card-header">Doodle</h1>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                quidem aliquid magnam cupiditate repellendus? Molestiae odio
+                iste
+              </p>
+              <button class="card-btn">Visit <span>&rarr;</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="card">
+            <img class="card-img" src="doodle.jpeg" alt="doodle" />
+            <div class="card-content">
+              <h1 class="card-header">Doodle</h1>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                quidem aliquid magnam cupiditate repellendus? Molestiae odio
+                iste
+              </p>
+              <button class="card-btn">Visit <span>&rarr;</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="card">
+            <img class="card-img" src="doodle.jpeg" alt="doodle" />
+            <div class="card-content">
+              <h1 class="card-header">Doodle</h1>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                quidem aliquid magnam cupiditate repellendus? Molestiae odio
+                iste
+              </p>
+              <button class="card-btn">Visit <span>&rarr;</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="card">
+            <img class="card-img" src="doodle.jpeg" alt="doodle" />
+            <div class="card-content">
+              <h1 class="card-header">Doodle</h1>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                quidem aliquid magnam cupiditate repellendus? Molestiae odio
+                iste
+              </p>
+              <button class="card-btn">Visit <span>&rarr;</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="card">
+            <img class="card-img" src="doodle.jpeg" alt="doodle" />
+            <div class="card-content">
+              <h1 class="card-header">Doodle</h1>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                quidem aliquid magnam cupiditate repellendus? Molestiae odio
+                iste
+              </p>
+              <button class="card-btn">Visit <span>&rarr;</span></button>
+            </div>
+          </div>
+        </div>
         <div class="grid-item">
           <div class="card">
             <img class="card-img" src="doodle.jpeg" alt="doodle" />
@@ -287,10 +332,6 @@
         </div>
       </div>
     </div>
-    <!-- <div class="footer">
-      <h1>
-        Under Development by <span><a href="https://github.com/Karthikrajatp">Karthikrajatp</a></span>
-      </h1>
-    </div> -->
+    
   </body>
 </html>
