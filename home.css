@@ -1,0 +1,150 @@
+
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      html {
+        height: 100%;
+        width: 100%;
+      }
+      body {
+        height: inherit;
+        width: inherit;
+        background-color: #ffffff;
+        overflow-y: scroll;
+      }
+      .header {
+        height: 10vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 10px;
+        border-bottom: 2px solid #000000;
+      }
+
+      .header div {
+        color: #000000;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .header a {
+        font-size:large;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-family: Poppins;
+      }
+      
+      .main {
+        display: flex;
+        height: 100vh;
+      }
+      .navbar {
+        background-color: rgb(228, 213, 152);
+        width: 25%;
+        height: 100%;
+        border-right: 2px black solid;
+        border-bottom: 2px black solid;
+      }
+      .nav {
+        padding: 0;
+        list-style-type: none;
+        height: 100%;
+        margin: 0;
+        width: 80%;
+        text-align: center;
+      }
+      .nav li {
+        width: 100%;
+        padding: 20px;
+      }
+      .nav li a {
+        display: block;
+        color: #000000;
+        background-color: rgb(228, 213, 152);
+        text-decoration: none;
+        text-align: center;
+        font-family: Poppins;
+        font-size: large;
+      }
+      .nav li a:hover {
+        color: rgb(143, 166, 85);
+      }
+
+      .content {
+        font-family: monospace;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-auto-rows: 450px;
+        grid-gap: 10px;
+        background-color: #eee;
+        padding: 10px;
+        overflow: scroll;
+      }
+      .grid-item {
+        background-color: #fff;
+        border-radius: 0.4rem;
+        overflow: hidden;
+        box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      .grid-item:hover {
+        transform: translateY(-1%);
+        box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+      }
+      .card-img {
+        display: block;
+        width: 100%;
+        height: 10rem;
+        object-fit: cover;
+      }
+      .card-content {
+        padding: 1rem;
+      }
+      .card-header {
+        font-size: 2rem;
+        font-weight: 500;
+        color: #0d0d0d;
+        margin-bottom: 1.5rem;
+      }
+      .card-text {
+        font-size: 0.9rem;
+        letter-spacing: 0.1rem;
+        line-height: 1rem;
+        color: #3d3d3d;
+        margin-bottom: 2.5rem;
+      }
+      .card-btn {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        background-color: dodgerblue;
+        border: none;
+        border-radius: 0.4rem;
+        transition: 0.2s;
+        cursor: pointer;
+        letter-spacing: 0.1rem;
+      }
+      .card-btn span {
+        margin-left: 1rem;
+        transition: 0.2s;
+      }
+      .card-btn:hover,
+      .card-btn:active {
+        background-color: dodgerblue;
+      }
+      .card-btn:hover span,
+      .card-btn:active span {
+        margin-left: 1.5rem;
+      }
+      .profile-btn{
+        padding: 10px;
+        border-radius: 50px;
+        background: dodgerblue;
+        box-shadow:  3px 3px 7px #d9d9d9,
+                      -3px -3px 7px #ffffff;
+      }
