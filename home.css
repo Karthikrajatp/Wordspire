@@ -141,7 +141,11 @@
       .card-btn:active span {
         margin-left: 1.5rem;
       }
-      .profile-btn{
+      .header-btns{
+        display: flex;
+        gap: 10px;
+    }  
+    .profile-btn,.logout-btn{
         padding: 10px;
         border-radius: 50px;
         background: dodgerblue;
