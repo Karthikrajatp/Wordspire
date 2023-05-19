@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Video Player</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: "Poppins", sans-serif;
+        }
+
+    </style>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	<script>
+		var app = angular.module('myApp', []);
+
+		app.controller('myCtrl', function($scope) {
+			$scope.videoUrl = "/Users/karthikrajatp/Desktop/blogapp2/tools/wwdc.mp4";
+  
+			$scope.skip = function(time) {
+				var video = document.getElementsByTagName('video')[0];
+				video.currentTime += time;
+			}
+  
+			$scope.pauseVid = function() {
+				var video = document.getElementsByTagName('video')[0];
+				video.pause();
+			}
+  
+			$scope.playVid = function() {
+				var video = document.getElementsByTagName('video')[0];
+				video.play();
+			}
+  
+			$scope.restart = function() {
+				var video = document.getElementsByTagName('video')[0];
+				video.currentTime = 0;
+			}
+		});
+	</script>
+</head>
+<body ng-controller="myCtrl">
+    <h1>VideoPlayer</h1>
+    <center>
+        <div class="video"><video width="640" height="640"controls ng-src="{{videoUrl}}" ng-click="pauseVid()">
+            Your browser does not support the video tag.
+        </video></div>
+    </center>
+    
+	
+<div class="operations">
+    <button ng-click="skip(-20)">-20s</button>
+	<button ng-click="skip(20)">+20s</button>
+	<button ng-click="pauseVid()">Pause</button>
+	<button ng-click="playVid()">Play</button>
+	<button ng-click="restart()">Restart</button>
+</div>
+</body>
+</html>

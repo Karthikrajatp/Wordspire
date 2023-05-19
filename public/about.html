@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+
+    <title>The Wordspire</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+      .html {
+        height: 100%;
+        width: 100%;
+      }
+      .body {
+        height: inherit;
+        width: inherit;
+        background-color: antiquewhite;
+      }
+      .videoplayer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all linear 0.5s;
+        background-color: lightblue;
+        margin-left:140%;
+      }
+      .ng-hide {
+        height: 1%;
+        }
+        .contentv{
+          height: 100%;
+          width: 100%;
+          border-left: 2px solid black;
+        }
+    </style>
+    <script>
+        var app = angular.module('myapp', ['ngAnimate']);
+        </script>
+  </head>
+  <body ng-app="myapp">
+    </div>
+    <div class="contentv">
+    <h1>Hide the VideoPlayer: <input type="checkbox" ng-model="myCheck"></h1>
+    <div ng-hide="myCheck" class="videoplayer">
+      <video width="400" height="420" controls autoplay loop>
+        <source src="./assets/images/quillvideo.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+  </body>
+</html>

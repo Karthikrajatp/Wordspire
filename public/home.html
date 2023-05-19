@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
+  <title>The Wordspire</title>
+  <link rel="stylesheet" href="./assets/css/home.css">
+  <style>
+    .results {
+      margin-left: 1%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      justify-content: center;
+      height: max-content;
+      border-left: 2px solid black;
+      margin-bottom: 10px;
+      padding-left: 15%;
+    }
+    
+    .search-res {
+      flex: 0 0 300px; 
+      width: 300px;
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border: 1px solid green;
+    }
+    .search-res:hover {
+        transform: translateY(-1%);
+        box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+      }
+
+    .post-image {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body ng-controller="mycontroller1">
+  <div class="results">
+    <div class="search-res" ng-repeat="p in posts">
+      <img class="post-image" src="./assets/images/doodle.jpeg" alt="Post Image" />
+      <h4>Post Title: {{ p.postTitle }}</h4>
+      <br />
+      <h4>Post Category: {{ p.postCategory }}</h4>
+      <br />
+      <p>Post Content: {{ p.postContent }}</p>
+      <br />
+    </div>
+  </div>
+</body>
+
+</html>

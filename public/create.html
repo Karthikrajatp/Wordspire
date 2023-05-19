@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>The Wordspire</title>
+    <style>
+         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+        .html{
+            height: 100%;
+            width: 100%;
+        }
+        .body{
+            height: inherit;
+            width: inherit;
+        }
+        .blog{
+            padding-top: 10%;
+            font-family: "Poppins";
+            width: 75%;
+            border-left:2px black solid; 
+            padding-left: 150%;
+            height:100vh;
+        }
+        .blog input[type="text"]{
+            width: 250%;
+            height: 30px;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .blog textarea{
+            width: 250%;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .submit{
+            width: 20%;
+            height: 30px;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background: dodgerblue;
+            color: #ffffff;
+            font-family: "Poppins";
+        }
+        label{
+            margin-left: 100%;
+        }
+        .blog input[type=submit]{
+            width:50%;
+            align-items: center;
+            margin-left: 97%;
+        }
+    </style>
+   <script>
+    var myapp = angular.module('myapp', []);
+    myapp.controller('myCtrl', function($scope) {
+    $scope.submitForm = function() {
+      if ($scope.myform.$valid) {
+        alert('Blog submitted!');
+      }
+    };
+  });
+</script>
+</script>
+</head>
+<body ng-app="myapp">
+    <center>
+        <div class="blog" ng-controller="myCtrl">
+            <div class="blog2">
+            <form name="myform" action="/create" method="post" ng-submit="submitForm()">
+              <label for="title">Title</label>
+              <br>
+              <input type="text" name="title" id="title" ng-required="true" placeholder="Enter the title of the blog">
+              <br>
+              <label for="category">Category</label>
+              <br>
+              <input type="text" name="category" id="category" ng-required="true" placeholder="Enter the category of the blog">
+              <br>
+              <label for="content">Content</label>
+              <br>
+              <textarea name="content" id="content" cols="30" rows="25" ng-required="true" placeholder="Enter the content of the blog"></textarea>
+              <br>
+              <input type="submit" ng-disabled="myform.$invalid" class="submit"/>
+            </form>
+        </div>
+          </div>
+        </center>   
+</body>
+</html>

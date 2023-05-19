@@ -1,0 +1,113 @@
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+  }
+
+  .results {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+  
+  }
+  .grid{
+    display: inline-block;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 400px;
+    padding-top:20px;
+    padding-bottom: 20px;
+  }
+
+  .searchbox {
+    width: 300px;
+    height: 30px;
+    padding: 05px;
+    border-radius: 5px;
+    font-size: 16px;
+
+  }
+
+  .search-btn {
+    height: 34px;
+    padding: 0 20px;
+    margin-left: 10px;
+    background-color: dodgerblue;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.5s;
+  }
+
+  .search-btn:hover {
+    background-color: #026aaf;
+  }
+
+  .search-res {
+    margin-top: 0;
+    width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    scale: 0.6;
+  }
+  .search-res:hover{
+    border: #026aaf;
+  }
+  center{
+    border-left: 2px solid black;
+  }
+  .post-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  h4 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+</style>
+
+<div class="results" ng-controller="mycontroller">
+  <div class="search2">
+    <center>
+    <div class="search">
+      <input name="term" type="text" class="searchbox" ng-model="searchTerm" />
+      <button class="search-btn" type="submit" ng-click="getPost()">Search</button>
+      <br />
+    </div>
+  </center>
+</div>
+  <center>
+    <div class="grid">
+    <div class="search-res" ng-repeat="p in posts">
+      <img class="post-image" src="./assets/images/doodle.jpeg" alt="Post Image" />
+      <h4>Post Title:{{ p.postTitle }}</h4>
+      <h4>Post Category:</h4>{{ p.postCategory }}
+      <br />
+      <h4>Post Content:</h4>{{ p.postContent }}
+      <br />
+    </div>
+  </div>
+  </center>
+</div>

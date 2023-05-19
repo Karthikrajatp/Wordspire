@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
+    <title>The Wordspire</title>
+    <link rel="stylesheet" href="./assets/css/home.css" />
+  </head>
+  <body ng-app="myapp">
+    <div class="header">
+      <div><h1>The Wordspire</h1></div>
+      <div class="header-btns">
+        <div class="logout-btn"><a href="./logout">LogOut</a></div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="navbar">
+        <ul class="nav">
+          <div>
+            <li>
+              <a href="#!home"><bold>Home</bold></a>
+            </li>
+          </div>
+          <div>
+            <li><a href="#!create">Create</a></li>
+          </div>
+          <div>
+            <li><a href="#!search">Search</a></li>
+          </div>
+          <div>
+            <li><a href="#!favourites">Favourites</a></li>
+          </div>
+          <div>
+            <li><a href="#!about">About</a></li>
+          </div>
+        </ul>
+      </div>
+      <div ng-view></div>
+    </div>
+  </body>
+  <script src="app1.js"></script>
+</html>

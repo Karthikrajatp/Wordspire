@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Text Editor</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700&display=swap">
+
+  <style>
+    body {
+        font-family: "Poppins", sans-serif;
+        height: 100%;
+        width: 100%;
+        background-color: #007bff;
+    }
+    
+    .text-editor {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      font-family: 'Poppins', sans-serif; /* Added font-family */
+    }
+    
+    .menu-bar {
+      margin-bottom: 10%;
+      display: flex;
+      justify-content:space-evenly;
+      margin-bottom: 10px;
+    }
+    
+    .menu-bar button {
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      font-size: medium;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif; /* Added font-family */
+    }
+    
+    .menu-bar button:hover {
+      background-color: #0056b3;
+    }
+    
+    .editor-area {
+      margin-left: 20%;
+      height: 200px;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    
+    .save-button {
+      display: block;
+      margin: 0 auto 10px; /* Updated margin to auto for horizontal centering */
+      background-color: #007bff;
+      color: #fff;
+      font-size: medium;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      font-family: 'Poppins', sans-serif; /* Added font-family */
+    }
+    
+    .save-button:hover {
+      background-color: #0056b3;
+    }
+    
+    .file-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+      font-family: 'Poppins', sans-serif; /* Added font-family */
+    }
+    
+    @media (max-width: 500px) {
+      .text-editor {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+      }
+    }
+    textarea{
+      background-color: antiquewhite;
+    }
+  </style>
+  
+  <body ng-controller="TextEditorController as editorCtrl">
+    <center><h1>Text Editor</h1></center>
+    <div class="text-editor">
+        <div class="editor-area">
+            <textarea ng-model="editorCtrl.text" rows="13" cols="100"></textarea>
+        </div>
+        <br>
+        <div class="menu-bar">
+            <button ng-click="editorCtrl.clearEditor()">Clear</button>
+            <button ng-click="editorCtrl.copyToClipboard()">Copy</button>
+            <button ng-click="editorCtrl.loadFile()">Load</button>
+            <button ng-click="editorCtrl.saveFile()">Save</button>
+        </div>
+        <div class="file-name" ng-show="editorCtrl.fileName">{{ editorCtrl.fileName }}</div>
+    </div>
+
+  </body>
+ 
+  <script>
+    angular.module('myApp', [])
+      .controller('TextEditorController', ['$window', function($window) {
+        var vm = this;
+        vm.text = '';
+        vm.fileName = '';
+        vm.alignment = '';
+  
+        vm.clearEditor = function() {
+          vm.text = '';
+          vm.fileName = '';
+        };
+  
+        vm.copyToClipboard = function() {
+          $window.navigator.clipboard.writeText(vm.text)
+            .then(function() {
+              $window.alert('Text copied to clipboard!');
+            })
+            .catch(function() {
+              $window.alert('Failed to copy text to clipboard!');
+            });
+        };
+  
+        vm.saveFile = function() {
+          if (vm.text) {
+            var fileName = prompt('Enter a file name');
+            if (fileName) {
+              localStorage.setItem(fileName, vm.text);
+              vm.fileName = fileName;
+              $window.alert('File saved successfully!');
+            } else {
+              $window.alert('Please enter a valid file name!');
+            }
+          } else {
+            $window.alert('Please enter some text before saving!');
+          }
+        };
+  
+        vm.loadFile = function() {
+          var fileName = prompt('Enter the file name to load');
+          if (fileName) {
+            var fileContent = localStorage.getItem(fileName);
+            if (fileContent) {
+              vm.text = fileContent;
+              vm.fileName = fileName;
+              $window.alert('File loaded successfully!');
+            } else {
+              $window.alert('File not found!');
+            }
+          } else {
+            $window.alert('Please enter a valid file name!');
+          }
+        };
+      }]);
+  </script>
+  
+</body>
+</html>

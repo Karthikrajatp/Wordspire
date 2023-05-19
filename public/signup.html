@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <title>The Wordspire</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./assets/css/signup.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  </head>
+
+  <script>
+    function validate() {
+
+      var user_email = document.getElementById("email").value;
+      var user_alt_email = document.getElementById("alt_email").value;
+      var user_name = document.getElementById("name").value;
+      var user_phno = document.getElementById("phno").value;
+      var user_pass = document.getElementById("upassword").value;
+      var user_repass = document.getElementById("urepassword").value;
+
+      var flag = true;
+      var email_regex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
+
+      if (user_name.length < 1) {
+        document.getElementById("messagenm").innerHTML ="Field should not be empty!!";
+        flag = false;
+      }
+      if (user_phno.length < 1) {
+        document.getElementById("messagephno").innerHTML ="Field should not be empty!!";
+        flag = false;
+      }
+      if (user_pass.length < 1) {
+        document.getElementById("messagepass").innerHTML ="Field should not be empty!!";
+        flag = false;
+      }
+      if (user_repass.length < 1) {
+        document.getElementById("messagerepass").innerHTML ="Field should not be empty!!";
+        flag = false;
+      }
+      if (email_regex.test(user_email) != true) {
+        document.getElementById("messagee").innerHTML ="Enter a valid emailid!!";
+        flag = false;
+      }
+      if (email_regex.test(user_alt_email) != true) {
+        document.getElementById("messageae").innerHTML ="Enter a valid emailid!!";
+        flag = false;
+      }
+      if(user_pass != user_repass){
+        alert("Passwords not Matching!!!");
+        flag = false;
+
+      }
+
+      if (flag == false) {
+        return false;
+      }
+      alert("Welcome to Wordspire "+user_name);
+
+      return true;
+    }
+  </script>
+  <body>
+    <div class="container">
+      <div class="title">Signup</div>
+      <div class="content">
+        <form action="/signup" method="POST" >
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Full Name</span>
+              <input
+                id="name"
+                type="text"
+                placeholder="Enter your name"
+                name="name"
+              />
+              <div>
+                <p id="messagenm" style="color: red"></p>
+              </div>
+            </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input
+                id="email"
+                type="text"
+                placeholder="Enter your email id"
+                name="email"
+              />
+              <div>
+                <p id="messagee" style="color: red"></p>
+              </div>
+            </div>
+            <div class="input-box">
+              <span class="details">Alternate-Email</span>
+              <input
+                id="alt_email"
+                type="text"
+                placeholder="Enter your alternate email id"
+                name="aemail"
+              />
+              <div>
+                <p id="messageae" style="color: red"></p>
+              </div>
+            </div>
+            <div class="input-box">
+              <span class="details">Phone Number</span>
+              <input
+                id="phno"
+                type="text"
+                placeholder="Enter your phone number"
+                name="phonenumber"
+              />
+              <div>
+                <p id="messagephno" style="color: red"></p>
+              </div>
+            </div>
+            <div class="input-box">
+              <span class="details">Password</span>
+              <input
+                type="text"
+                id="upassword"
+                placeholder="Enter your password"
+                name="password"
+              />
+              <div>
+                <p id="messagepass" style="color: red"></p>
+              </div>
+            </div>
+            <div class="input-box">
+              <span class="details">Confirm Password</span>
+              <input
+                type="text"
+                id="urepassword"
+                placeholder="Confirm your password"
+                name="confirmpassword"
+              />
+              <div>
+                <p id="messagerepass" style="color: red"></p>
+              </div>
+            </div>
+          </div>
+          <div class="button">
+            <input type="submit"  value="Register"/>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

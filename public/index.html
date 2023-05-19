@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Wordspire</title>
+    <link rel="stylesheet" href="./assets/css/login.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  </head>
+  <body>
+    <div class="outer">
+      <table>
+        <tr>
+          <td style="height: 70%; width: 60%">
+            <img
+              src="./assets/images/penandpaper.jpg"
+              alt="PenandPaper"
+              usemap="#penpaper"
+              height="60%"
+              width="80%"
+            />
+            <map name="penpaper">
+              <area
+                shape="poly"
+                coords="260,95,910,210,818,335,733,513,674,691,650,845,603,853,416,831,194,788,171,728,168,607,229,449,292,504,415,530,468,506,430,466,353,373,296,307,352,228,393,177,426,141,445,123,533,133"
+                title="Paper"
+                href="https://en.wikipedia.org/wiki/Paper"
+              />
+            </map>
+          </td>
+          <td class="log">
+            <div class="login" ng-app="">
+              <h1 style="justify-content: center">Welcome to Wordspire</h1>
+              <form name="loginForm" action="/" method="POST">
+                <div class="txt_field">
+                  <input type="email" name="email" ng-required="true" ng-model="name" />
+                  <label>Email</label>
+                </div>
+                <div class="txt_field">
+                  <input name="password" type="password" ng-required="true"/>
+                  <span></span>
+                  <label>Password</label>
+                </div>
+                <input
+                  type="submit"
+                  value="Login"
+                  class="button"
+                />
+                <div class="signup_link">
+                  Not a member?<a href="/signup">Signup</a>
+                </div>
+              </form>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
